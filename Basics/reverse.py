@@ -1,4 +1,5 @@
 import datetime
+import random
 
 def reverse_string(inputStr):
     """Reverses the given string and returns it."""
@@ -22,3 +23,10 @@ def parse_expense(expenses_string):
                             float(value),
                             currency))
     return expenses
+
+def get_random_line(file_path):
+    """Reads a file and returns a random line from it."""
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+        random_line = random.choice(lines)
+        return random_line.strip()

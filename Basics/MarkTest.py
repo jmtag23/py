@@ -3,10 +3,14 @@ current_year=2019
 age=current_year-birth_year
 print("Your Age is : " + str(age))
 
-from reverse import reverse_string, parse_expense
+from reverse import reverse_string, parse_expense, get_random_line
 
 my_string = "Your Age is : " + str(age)
 print(reverse_string(my_string))
+
+file_path = 'C:/temp/DateTimeFile.txt'
+random_line = get_random_line(file_path)
+print("Random Line: " + random_line)
 
 with open('C:/temp/TestText.txt', 'r') as f:
     print(f.read())
