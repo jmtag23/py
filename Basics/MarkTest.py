@@ -1,4 +1,3 @@
-
 birth_year=1982
 current_year=2019
 age=current_year-birth_year
