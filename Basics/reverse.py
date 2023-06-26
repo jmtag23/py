@@ -1,6 +1,13 @@
 import datetime
 import random
 
+def calculateDaysBetweenDates(begins, ends):
+    """Calculates the number of days between two given dates"""
+    begind = datetime.datetime.strptime(begins, "%Y-%m-%d")
+    endd = datetime.datetime.strptime(ends, "%Y-%m-%d")
+    deltadays = endd - begind
+    return deltadays
+
 def reverse_string(inputStr):
     """Reverses the given string and returns it."""
     return inputStr[::-1]
@@ -30,3 +37,12 @@ def get_random_line(file_path):
         lines = file.readlines()
         random_line = random.choice(lines)
         return random_line.strip()
+    
+def coverter(tempString):
+    """Coverts string to float and calculates"""
+    return float(tempString)*(9/5)+32
+
+def hello():
+    
+    
+    
