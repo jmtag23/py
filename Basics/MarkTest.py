@@ -3,31 +3,16 @@ current_year=2019
 age=current_year-birth_year
 print("Your Age is : " + str(age))
 
+from reverse import reverse_string, parse_expense
+
+my_string = "Your Age is : " + str(age)
+print(reverse_string(my_string))
+
 with open('C:/temp/TestText.txt', 'r') as f:
     print(f.read())
 
-
-import datetime
-
-def parse_expense(expenses_string):
-    """Parse the list of expenses and return the list of triples (date, value, currency).
-    Ignore lines starting with #.
-    Parse the date using datetime.
-    Example expenses_string:
-        2016-01-02 -34.01 USD
-        2016-01-03 2.59 DKK
-        2016-01-03 -2.72 EUR
-    """
-    expenses = []
-    for line in expenses_string.splitlines():
-        if line.startswith("#"):
-            continue
-        date, value, currency = line.split(" ")
-        expenses.append((datetime.datetime.strptime(date, "%Y-%m-%d"),
-                            float(value),
-                            currency))
-    return expenses
-
-
 with open('C:/temp/DateTimeFile.txt', 'r') as dtf:
-    parse_expense(dtf.read())
+    print(parse_expense(dtf.read()))
+
+with open('C:/temp/DateTimeFile.txt', 'r') as rf:
+    print(reverse_string(rf.read()))
