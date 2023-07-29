@@ -42,7 +42,10 @@ def coverter(tempString):
     """Coverts string to float and calculates"""
     return float(tempString)*(9/5)+32
 
-def hello():
-    
+def concatString(s1, s2):
+    """Combine two strings and return 1"""
+    return s1 + s2
+
+"""still not working"""
     
     
